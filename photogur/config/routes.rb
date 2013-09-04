@@ -3,6 +3,9 @@ Photogur::Application.routes.draw do
   # first created -> highest priority.
     get 'pictures' => 'pictures#index'
 
+    post 'pictures' => "pictures#create" # this is a new line of code
+    get 'pictures/new' => 'pictures#new' # this is also a new line of code
+
     get 'pictures/:id' => 'pictures#show', as: "picture"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
